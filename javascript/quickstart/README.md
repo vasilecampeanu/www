@@ -22,5 +22,12 @@ document.getElementsByClassName("class");
 document.querySelector("element");
 ```
 
+## How do you create an html element from JS?
+
+## How do you append a html element to a parent element?
+
 ## What is a promise?
 A promise is an object that may produce a single value some time in the future:
+
+## What is an HTTP request?
+An HTTP request is made by a client, to a named host, which is located on a server.

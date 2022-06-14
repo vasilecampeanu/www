@@ -3,7 +3,7 @@
 var message_1 = "Hello";
 
 // Let variables are scoped to the immediate enclosing block denoted by { } (hence the block scope).
-let message_2 = "world"; 
+let message_2 = "world";
 
 // Constant variables can't be modified.
 // This is also an example of concatenation.
@@ -27,6 +27,34 @@ function increment() {
     counter.innerHTML = cnt;
     console.log("cnt: " + cnt);
 }
+
+// Load json filse over HTTP request.
+function lodJsonFile(callback) {
+    var xobject = new XMLHttpRequest();
+
+    xobject.overrideMimeType("application/json");
+    xobject.open('GET', './data.json', true);
+
+    xobject.onreadystatechange = function () {
+        if (xobject.readyState === 4 && xobject.status === 200) {
+            callback(xobject.responseText);
+        }
+    };
+
+    xobject.send(null);
+}
+
+function init() {
+    lodJsonFile(function (response) {
+        console.log('response =', response);
+        var json = JSON.parse(response);
+        console.log('your local JSON =', JSON.stringify(json, null, 4));
+        const app = document.querySelector('#load-json-file');
+        app.innerHTML = '<pre>' + JSON.stringify(json, null, 4) + '</pre>';
+    });
+}
+
+init();
 
 // Count down.
 const timer = ms => new Promise(res => setTimeout(res, ms));
