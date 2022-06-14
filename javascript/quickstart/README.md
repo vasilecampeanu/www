@@ -1,5 +1,11 @@
-# What i've learned in this section?
+# The scope of this repository
 Introduction to the basic concept of Java Script.
+
+# What i've learned in this section?
+
+- How to acces html elements from inside JS.
+- How to load files over HTTP request.
+- How to use Java Script modules.
 
 # Questions
 ## What is Java Script?
