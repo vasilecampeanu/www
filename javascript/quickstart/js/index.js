@@ -1,3 +1,5 @@
+"use strict"
+
 // Include JS modules
 import { lodJsonFile } from "./fileLoader.js"
 import { increment, countDown } from "./utils.js"
