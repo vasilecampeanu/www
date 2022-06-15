@@ -1,3 +1,4 @@
+// Include JS modules
 import { lodJsonFile } from "./fileLoader.js"
 import { increment, countDown } from "./utils.js"
 
@@ -12,13 +13,12 @@ let message_2 = "world";
 // This is also an example of concatenation.
 const message_complete = message_1 + " " + message_2 + "!";
 
-// First line of code in JavaScript.
-console.log("Message: " + message_complete);
+// On page load
+function onPageLoad() {
+    // Hello world.
+    console.log("Message: " + message_complete);
 
-// Acces html element.
-document.getElementById("hello").innerHTML = message_complete;
-
-function init() {
+    // Lod json file
     lodJsonFile(function (response) {;
         var json = JSON.parse(response);
         const app = document.querySelector('#load-json-file');
@@ -26,4 +26,11 @@ function init() {
     });
 }
 
-init();
+$(document).ready(function () {
+    // Preload things
+    onPageLoad();
+
+    // After preload.
+    // Acces html element.
+    document.getElementById("hello").innerHTML = message_complete; 
+});

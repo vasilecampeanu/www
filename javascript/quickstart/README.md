@@ -1,4 +1,4 @@
-# The scope of this repository
+# The scope of this directory
 Introduction to the basic concept of Java Script.
 
 # What i've learned in this section?
