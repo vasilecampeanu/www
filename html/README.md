@@ -29,4 +29,4 @@
 
 ## Descriptive link name
 
-## Use relevant combination of words based on history data
+## Use relevant combination of words based on historical data
