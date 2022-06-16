@@ -21,7 +21,7 @@ function onPageLoad() {
     console.log("Message: " + message_complete);
 
     // Lod json file
-    lodJsonFile(function (response) {;
+    lodJsonFile(function (response) {
         var json = JSON.parse(response);
         const app = document.querySelector('#load-json-file');
         app.innerHTML = '<pre>' + JSON.stringify(json, null, 4) + '</pre>';
