@@ -1,5 +1,11 @@
+/**
+ * Calculates the winner
+ * @param {*} squares 
+ * @returns 
+ */
 export function calculateWinner(squares) {
-    // Winning combination
+
+    // Look up array. Winning combinations.
     const lines = [
         [0, 1, 2],
         [3, 4, 5],
@@ -21,11 +27,3 @@ export function calculateWinner(squares) {
 
     return null;
 }
-
-const squares = [
-    null, null, null,
-    'X', 'X', 'X',
-    null, null, null
-];
-
-console.log(calculateWinner(squares));
